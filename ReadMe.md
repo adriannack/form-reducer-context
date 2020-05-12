@@ -2,6 +2,14 @@
 
 > React’s Context API allows you to store the state in what looks like an application global state and access it only in the components that need them, without having to drill it down via props.
 
+### useReducer() and useContext() 
+Removed `useState()` in favor of `useReducer()`
+Applied `useContext()` hook in favor of `SomeContext.Consumer => context => {}` 
+
+### Smart Form 
+Reusable Field 
+Connected Form and Field option
+
 #### but before you start...prefer colocation wherever possible.
 
 **What is colocated state?**
