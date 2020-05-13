@@ -39,7 +39,12 @@ const UserDetails = () => {
       <p>First Name: {firstName}</p>
       <p>Last Name: {lastName}</p>
 
-      <Form onSubmit={e => console.log(state)} />
+      <Form
+        onSubmit={e => {
+          e.prevenDefault();
+          //submit
+        }}
+      />
     </section>
   );
 };

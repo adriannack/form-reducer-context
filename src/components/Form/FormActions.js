@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../CustomContexts";
 
-const FormActions = props => {
-  const { handleReset } = useContext(UserContext);
+const FormActions = () => {
+  const { handleReset, errors } = useContext(UserContext);
+  console.log("errors", errors);
   return (
     <>
       <button type="button" onClick={handleReset}>
         Reset
       </button>
 
-      <button type="submit">Save</button>
+      <button disabled={Object.keys(errors).length} type="submit">
+        Save
+      </button>
     </>
   );
 };
